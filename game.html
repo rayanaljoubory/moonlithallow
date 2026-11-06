@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configure mobile display, browser theme, title, and shared styles. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100d0b">
+    <title>Moonlit Hollow | Rayan's Spooky World</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="register-page game-site-page">
+    <!-- Shared navigation between the site's main pages. -->
+    <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="score.html">High Scores</a>
+        <a class="active" href="game.html" aria-current="page">Game</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms & Privacy</a>
+    </nav>
+
+    <!-- Game instructions, live status displays, and Phaser game canvas. -->
+    <main class="game-page">
+        <header class="game-heading">
+            <p class="eyebrow">A haunted platform adventure</p>
+            <h1>Moonlit Hollow</h1>
+            <p>Explore all three eerie levels, gather every lost soul, and find the glowing gate.</p>
+        </header>
+
+        <section class="game-panel" aria-label="Moonlit Hollow game">
+            <div class="game-hud" aria-live="polite">
+                    <span id="levelDisplay">Level 1 of 3</span>
+                    <span id="collectibleDisplay">Lost souls: 0 / 0</span>
+                    <span id="gameScoreDisplay">Score: 0</span>
+                    <span id="livesDisplay">Lanterns: 2</span>
+                    <span id="deathDisplay">Deaths: 0</span>
+                    <span id="levelTimeDisplay">Level time: 0:00</span>
+            </div>
+            <div id="gameCanvas" class="game-canvas" aria-label="Game area"></div>
+            <p id="gameMessage" class="game-message" aria-live="polite">Loading the haunted hollow...</p>
+            <div class="game-actions">
+                <button id="restartGame" type="button" class="game-button">Restart game</button>
+                <a class="game-button game-button-secondary" href="score.html">View high scores</a>
+            </div>
+            <p id="audioStatus" class="audio-status" aria-live="polite">Eerie ambience starts automatically. Interact with the page if your browser blocks autoplay.</p>
+            <div class="game-instructions">
+                <p><b>Move:</b> A / D or ← / → &nbsp; <b>Jump:</b> W, ↑, or Space</p>
+                <p>Collect every lost soul to open the gate. Watch out for wandering spirits!</p>
+                <p>Score: +100 per soul, lose 50 per death, and earn up to 300 bonus points per level for speed (5 fewer points per second).</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rayan Aljoubory. All rights reserved.</p>
+    </footer>
+
+    <!-- Load Phaser before the project's game setup module. -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+    <script src="js/game.js" type="module"></script>
+</body>
+</html>

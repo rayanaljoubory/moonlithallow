@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configure the document and load the shared stylesheet. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="register-page">
+    <!-- Shared navigation between the site's main pages. -->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a class="active" href="score.html" aria-current="page">High Scores</a>
+        <a href="game.html">Game</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms & Privacy</a>
+    </div>
+
+    <!-- Shows account status, the latest run, and the saved leaderboard. -->
+    <main class="score-section">
+        <h1>High Scores</h1>
+        <p id="currentUser" aria-live="polite">Log in to save a score.</p>
+        <p id="gameScoreSummary" aria-live="polite">Play <a href="game.html">Moonlit Hollow</a> to record a game score.</p>
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rayan Aljoubory. All rights reserved.</p>
+    </footer>
+    <!-- Loads saved users and keeps the score display current. -->
+    <script src="js/script.js"></script>
+</body>
+</html>

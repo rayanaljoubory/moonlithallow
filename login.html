@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configure the document and load the shared stylesheet. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="login-page">
+    <!-- Shared navigation between the site's main pages. -->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="score.html">High Scores</a>
+        <a href="game.html">Game</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms & Privacy</a>
+    </div>
+    <!-- Login fields and a live region for validation or sign-in feedback. -->
+    <main class="login-form">
+        <h1>Login</h1>
+        <p>Please fill in this form to login to an account.</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <button type="button" onclick="login()">Login</button>
+        <p id="loginMessage" aria-live="polite"></p>
+    </main>
+
+     <!-- Shared copyright notice. -->
+     <footer>
+        <p>&copy; 2026 Rayan Aljoubory. All rights reserved.</p>
+    </footer>
+    <!-- Provides login handling and other shared account/score features. -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+/* Shared heading and navigation styles. */
+header h1 {
+    color-scheme: dark;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #eee4d2;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    line-height: 1.08;
+    text-shadow: 0 3px 24px #000;
+}
+
+.topnav {
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    background-color: #333;
+    text-align: right;
+    padding: 20px;
+}
+
+.topnav a {
+    
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Base page background and centered informational-page layout. */
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at 50% 0, #342219 0, #100d0b 55%);
+}
+
+.about-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 48px 20px;
+}
+
+.about-box {
+    width: min(100%, 720px);
+    padding: clamp(28px, 6vw, 56px);
+    border: 1px solid #7d603c;
+    border-top: 4px solid #d6a65d;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #211912, #17110d);
+    box-shadow: 0 22px 60px #0009;
+}
+
+.about-box h1 {
+    margin: 0 0 24px;
+    color: #eee4d2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
+    line-height: 1.08;
+}
+
+.about-eyebrow {
+    margin: 0 0 12px;
+    color: #d6a65d;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.about-box > p:not(.about-eyebrow) {
+    margin: 0 0 18px;
+    color: #c4b9a9;
+    line-height: 1.8;
+}
+
+.about-box > p:last-child {
+    margin-bottom: 0;
+}
+
+.about-box a {
+    color: #e6b867;
+    text-underline-offset: 4px;
+}
+
+.about-box a:hover {
+    color: #fff0ce;
+}
+
+/* Home page heading, preview image, and play button. */
+.page-header {
+    padding: 64px 24px 32px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #d6a65d;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.intro,
+.game-description,
+footer p {
+    color: #c4b9a9;
+    line-height: 1.7;
+}
+
+.intro {
+    margin: 18px 0 0;
+    font-size: 1.1rem;
+}
+
+.game-section {
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    padding-bottom: 56px;
+    text-align: center;
+}
+
+.game-description {
+    margin: 10px auto 24px;
+}
+
+.game-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #7d603c;
+    border-radius: 12px;
+    background: #211912;
+    box-shadow: 0 18px 50px #0009;
+}
+
+.game-container::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #090706a8, transparent 55%);
+    content: "";
+    pointer-events: none;
+}
+
+.game-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    padding: 15px 30px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #f1dfb2;
+    border-radius: 6px;
+    background: #7b2922eF;
+    box-shadow: 0 5px 24px #0009;
+    color: #fff4dc;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    background: #a43b30;
+}
+
+.play-button:focus-visible {
+    outline: 3px solid #fff4dc;
+    outline-offset: 5px;
+}
+
+footer {
+    padding: 12px 20px;
+    border-top: 1px solid #392b20;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+    /* Reduce spacing and button size on narrow screens. */
+    .page-header {
+        padding-top: 44px;
+    }
+
+    .game-section {
+        width: min(100% - 24px, 1000px);
+    }
+
+    .play-button {
+        padding: 12px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Respect users who ask the browser to limit motion effects. */
+    .play-button {
+        transition: none;
+    }
+}
+
+/* Registration Form Styles */
+
+.register-page {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body.game-site-page {
+    /* Keep the game page from creating a horizontal scrollbar. */
+    overflow-x: hidden;
+}
+
+/* Shared sizing and registration-form layout. */
+* {
+    box-sizing: border-box
+}
+
+.container {
+    padding: 16px;
+}
+
+#register + .container {
+    width: min(100% - 32px, 520px);
+    margin: 24px auto;
+}
+
+#register + .container h1,
+.login-form h1 {
+    color: #e6c27a;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 2.9rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-shadow: 0 0 8px #b33a2f99, 0 0 22px #8f241f66;
+}
+
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+#register + .container input[type=text],
+#register + .container input[type=email],
+#register + .container input[type=tel],
+#register + .container input[type=password] {
+    padding: 11px 12px;
+    margin-bottom: 14px;
+}
+
+#register + .container .registerbtn {
+    padding: 12px 16px;
+}
+
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+#registerMessage:not(:empty) {
+    /* Highlight registration feedback only after a message is present. */
+    padding: 8px 10px;
+    border: 2px solid #ff4d4d;
+    border-radius: 4px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+a {
+    color: dodgerblue;
+}
+.signin {
+    background-color: #050505;
+    text-align: center;
+}
+
+.score-section {
+    /* Card layout for the leaderboard and latest-score summary. */
+    width: min(100% - 40px, 600px);
+    margin: 32px auto 56px;
+    padding: 24px;
+    border: 1px solid #7d603c;
+    border-radius: 10px;
+    background: #211912;
+    color: #eee4d2;
+}
+
+.score-section h1,
+.score-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.score-input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 12px;
+    border: none;
+    background: #f1f1f1;
+}
+
+.score-section li {
+    padding: 4px 0;
+}
+
+/* Login Form Styles */
+
+/* Center the login fields and provide a clear feedback area. */
+.login-page {
+    background-color: #050505;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.login-form {
+    width: min(100% - 32px, 520px);
+    margin: 24px auto;
+    padding: 16px;
+}
+
+.login-form h1 {
+    margin-top: 0;
+}
+
+.login-page input[type="email"],
+.login-page input[type="password"] {
+    width: 100%;
+    padding: 11px 12px;
+    margin: 5px 0 14px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.login-page input[type="email"]:focus,
+.login-page input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+.login-page button {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border: none;
+    background-color: #04aa6d;
+    color: white;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.login-page button:hover {
+    opacity: 1;
+}
+
+#loginMessage:not(:empty) {
+    padding: 8px 10px;
+    border: 2px solid #ff4d4d;
+    border-radius: 4px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.game-page {
+    /* Keep the game readable while limiting its maximum page width. */
+    width: min(100% - 32px, 1040px);
+    margin: 0 auto;
+    padding: 34px 0 52px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.game-heading h1 {
+    width: 100%;
+    margin: 0;
+    color: #eee4d2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    text-shadow: 0 3px 24px #000;
+    text-align: center;
+}
+
+.game-heading > p:last-child {
+    margin: 12px 0 0;
+    color: #c4b9a9;
+    line-height: 1.6;
+}
+
+.game-panel {
+    /* Frame the game canvas and its related status and controls. */
+    overflow: hidden;
+    border: 1px solid #7d603c;
+    border-radius: 12px;
+    background: #17151f;
+    box-shadow: 0 18px 50px #0009;
+}
+
+.game-hud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 18px;
+    padding: 14px 18px;
+    background: #211912;
+    color: #f0dba9;
+    font-weight: 700;
+}
+
+.game-canvas {
+    /* Preserve the game's 16:9 canvas proportions as the page resizes. */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #10121b;
+}
+
+.game-canvas canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    touch-action: pan-y;
+}
+
+.game-message {
+    min-height: 1.5em;
+    margin: 0;
+    padding: 14px 18px 4px;
+    color: #f0dba9;
+    text-align: center;
+}
+
+.game-actions {
+    /* Keep game controls together and allow them to wrap on small screens. */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 18px 16px;
+}
+
+.audio-status {
+    margin: 0;
+    padding: 0 18px 10px;
+    color: #c4b9a9;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.game-button {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 1px solid #c9a774;
+    border-radius: 6px;
+    background: #743b38;
+    color: #fff4dc;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.game-button:hover,
+.game-button:focus-visible {
+    background: #98504a;
+}
+
+.game-button-secondary {
+    background: #353042;
+}
+
+.game-instructions {
+    padding: 2px 18px 16px;
+    color: #c4b9a9;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.game-instructions p {
+    margin: 7px 0;
+}
+
+.game-instructions strong {
+    color: #f0dba9;
+}
+
+
+@media (max-width: 600px) {
+    /* Adjust the game layout for phones and other narrow displays. */
+    .game-page {
+        width: min(100% - 20px, 1040px);
+        padding-top: 24px;
+    }
+
+    .game-hud {
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .game-message {
+        padding-inline: 12px;
+        font-size: 0.95rem;
+    }
+}
